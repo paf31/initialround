@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InitialRound.BusinessLogic.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SessionExpiryInterval" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:30:00</Value>
+    </Setting>
+    <Setting Name="MaxLoginAttempts" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="AccountLockDuration" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:30:00</Value>
+    </Setting>
+    <Setting Name="MinTimeBetweenLoginAttempts" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:00:03</Value>
+    </Setting>
+    <Setting Name="EmailSender" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MinimumPasswordLength" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="AntiForgeryTokenExpiryInterval" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:30:00</Value>
+    </Setting>
+    <Setting Name="SaltSize" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">256</Value>
+    </Setting>
+    <Setting Name="HashIterations" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="HashSize" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">256</Value>
+    </Setting>
+    <Setting Name="EmailSenderName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Do Not Reply</Value>
+    </Setting>
+    <Setting Name="ResetPasswordTokenExpiryInterval" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:30:00</Value>
+    </Setting>
+    <Setting Name="TestsExecutedPerQuestion" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

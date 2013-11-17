@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="InitialRound" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" schemaVersion="2012-10.1.8">
+  <Role name="InitialRound.Web">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="TableStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="RootConnectionString" value="" />
+      <Setting name="BlobStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="QueueStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="RootURI" value="https://127.0.0.1:81/" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="InitialRound.Email">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="SmtpHost" value="" />
+      <Setting name="SmtpUsername" value="" />
+      <Setting name="SmtpPassword" value="" />
+      <Setting name="SmtpPort" value="587" />
+      <Setting name="SmtpTimeout" value="10000" />
+      <Setting name="TableStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="QueueStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

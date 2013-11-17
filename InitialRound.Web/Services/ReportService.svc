@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="InitialRound.Web.Services.AccountService" CodeBehind="ReportService.svc.cs" %>

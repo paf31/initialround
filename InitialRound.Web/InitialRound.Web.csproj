@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50C08955-6F32-4564-9B47-D268F406415A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InitialRound.Web</RootNamespace>
+    <AssemblyName>InitialRound.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.1.0.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.3\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AccountService\ChangePasswordRequest.cs" />
+    <Compile Include="Classes\AccountService\ChangePasswordResponse.cs" />
+    <Compile Include="Classes\AccountService\CompletePasswordResetRequest.cs" />
+    <Compile Include="Classes\AccountService\CompletePasswordResetResponse.cs" />
+    <Compile Include="Classes\AccountService\CreateAntiForgeryTokenRequest.cs" />
+    <Compile Include="Classes\AccountService\CreateAntiForgeryTokenResponse.cs" />
+    <Compile Include="Classes\AccountService\KeepAliveRequest.cs" />
+    <Compile Include="Classes\AccountService\KeepAliveResponse.cs" />
+    <Compile Include="Classes\AccountService\LoginRequest.cs" />
+    <Compile Include="Classes\AccountService\LoginResponse.cs" />
+    <Compile Include="Classes\AccountService\ResetPasswordRequest.cs" />
+    <Compile Include="Classes\AccountService\ResetPasswordResponse.cs" />
+    <Compile Include="Classes\AdminPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\ApplicantService\BulkCreateApplicantsRequest.cs" />
+    <Compile Include="Classes\ApplicantService\BulkCreateApplicantsResponse.cs" />
+    <Compile Include="Classes\ApplicantService\CreateApplicantRequest.cs" />
+    <Compile Include="Classes\ApplicantService\CreateApplicantResponse.cs" />
+    <Compile Include="Classes\ApplicantService\DeleteApplicantRequest.cs" />
+    <Compile Include="Classes\ApplicantService\EditApplicantRequest.cs" />
+    <Compile Include="Classes\ApplicantService\GetApplicantRequest.cs" />
+    <Compile Include="Classes\ApplicantService\GetApplicantResponse.cs" />
+    <Compile Include="Classes\ApplicantService\GetApplicantsRequest.cs" />
+    <Compile Include="Classes\ApplicantService\GetApplicantsResponse.cs" />
+    <Compile Include="Classes\ApplicantService\GetApplicantsResponseItem.cs" />
+    <Compile Include="Classes\ApplicantService\ParseApplicantsCSVRequest.cs" />
+    <Compile Include="Classes\ApplicantService\ParseApplicantsCSVResponse.cs" />
+    <Compile Include="Classes\AuthenticatedPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\InterviewService\CreateAttemptTokenRequest.cs" />
+    <Compile Include="Classes\InterviewService\CreateAttemptTokenResponse.cs" />
+    <Compile Include="Classes\InterviewService\CreateInterviewRequest.cs" />
+    <Compile Include="Classes\InterviewService\CreateInterviewResponse.cs" />
+    <Compile Include="Classes\InterviewService\DeleteInterviewRequest.cs" />
+    <Compile Include="Classes\InterviewService\DownloadInputRequest.cs" />
+    <Compile Include="Classes\InterviewService\DownloadInputResponse.cs" />
+    <Compile Include="Classes\InterviewService\EditInterviewRequest.cs" />
+    <Compile Include="Classes\InterviewService\GetAttemptDetailsRequest.cs" />
+    <Compile Include="Classes\InterviewService\GetAttemptDetailsResponse.cs" />
+    <Compile Include="Classes\InterviewService\GetAttemptsRequest.cs" />
+    <Compile Include="Classes\InterviewService\GetAttemptsResponse.cs" />
+    <Compile Include="Classes\InterviewService\GetAttemptsResponseItem.cs" />
+    <Compile Include="Classes\InterviewService\GetInterviewRequest.cs" />
+    <Compile Include="Classes\InterviewService\GetInterviewResponse.cs" />
+    <Compile Include="Classes\InterviewService\GetInterviewsRequest.cs" />
+    <Compile Include="Classes\InterviewService\GetInterviewsResponse.cs" />
+    <Compile Include="Classes\InterviewService\GetInterviewsResponseItem.cs" />
+    <Compile Include="Classes\InterviewService\InterviewQuestion.cs" />
+    <Compile Include="Classes\InterviewService\InterviewQuestionItem.cs" />
+    <Compile Include="Classes\InterviewService\LoadInterviewRequest.cs" />
+    <Compile Include="Classes\InterviewService\LoadInterviewResponse.cs" />
+    <Compile Include="Classes\InterviewService\PracticeRequest.cs" />
+    <Compile Include="Classes\InterviewService\PracticeResponse.cs" />
+    <Compile Include="Classes\InterviewService\QuickStartRequest.cs" />
+    <Compile Include="Classes\InterviewService\QuickStartResponse.cs" />
+    <Compile Include="Classes\InterviewService\RunTestsResult.cs" />
+    <Compile Include="Classes\InterviewService\SendInvitationRequest.cs" />
+    <Compile Include="Classes\InterviewService\SendInvitationResponse.cs" />
+    <Compile Include="Classes\InterviewService\StartInterviewRequest.cs" />
+    <Compile Include="Classes\InterviewService\StartInterviewResponse.cs" />
+    <Compile Include="Classes\InterviewService\SubmitAnswerRequest.cs" />
+    <Compile Include="Classes\InterviewService\SubmitAnswerResponse.cs" />
+    <Compile Include="Classes\InterviewService\TestResultSummary.cs" />
+    <Compile Include="Classes\QuestionService\CreateQuestionRequest.cs" />
+    <Compile Include="Classes\QuestionService\CreateQuestionResponse.cs" />
+    <Compile Include="Classes\QuestionService\DeleteQuestionRequest.cs" />
+    <Compile Include="Classes\QuestionService\DownloadInputRequest.cs" />
+    <Compile Include="Classes\QuestionService\DownloadInputResponse.cs" />
+    <Compile Include="Classes\QuestionService\EditQuestionRequest.cs" />
+    <Compile Include="Classes\QuestionService\EditQuestionResponse.cs" />
+    <Compile Include="Classes\QuestionService\GetQuestionRequest.cs" />
+    <Compile Include="Classes\QuestionService\GetQuestionResponse.cs" />
+    <Compile Include="Classes\QuestionService\GetQuestionsRequest.cs" />
+    <Compile Include="Classes\QuestionService\GetQuestionsResponse.cs" />
+    <Compile Include="Classes\QuestionService\GetQuestionsResponseItem.cs" />
+    <Compile Include="Classes\QuestionService\ParseTestsCSVRequest.cs" />
+    <Compile Include="Classes\QuestionService\ParseTestsCSVResponse.cs" />
+    <Compile Include="Classes\QuestionService\QuestionTest.cs" />
+    <Compile Include="Classes\QuestionService\RunTestsRequest.cs" />
+    <Compile Include="Classes\QuestionService\RunTestsResponse.cs" />
+    <Compile Include="Classes\QuestionService\RunTestsResponseItem.cs" />
+    <Compile Include="Classes\QuestionSetService\CreateQuestionSetRequest.cs" />
+    <Compile Include="Classes\QuestionSetService\CreateQuestionSetResponse.cs" />
+    <Compile Include="Classes\QuestionSetService\DeleteQuestionSetRequest.cs" />
+    <Compile Include="Classes\QuestionSetService\EditQuestionSetRequest.cs" />
+    <Compile Include="Classes\QuestionSetService\GetQuestionSetRequest.cs" />
+    <Compile Include="Classes\QuestionSetService\GetQuestionSetResponse.cs" />
+    <Compile Include="Classes\QuestionSetService\GetQuestionSetsRequest.cs" />
+    <Compile Include="Classes\QuestionSetService\GetQuestionSetsResponse.cs" />
+    <Compile Include="Classes\QuestionSetService\GetQuestionSetsResponseItem.cs" />
+    <Compile Include="Classes\QuestionSetService\QuestionSetQuestionItem.cs" />
+    <Compile Include="Classes\ReportService\HomePageReport.cs" />
+    <Compile Include="Classes\ReportService\HomePageReportRequest.cs" />
+    <Compile Include="Classes\UserService\CreateUserRequest.cs" />
+    <Compile Include="Classes\UserService\CreateUserResponse.cs" />
+    <Compile Include="Classes\UserService\DeleteUserRequest.cs" />
+    <Compile Include="Classes\UserService\EditUserRequest.cs" />
+    <Compile Include="Classes\UserService\EditUserResponse.cs" />
+    <Compile Include="Classes\UserService\GetUserRequest.cs" />
+    <Compile Include="Classes\UserService\GetUserResponse.cs" />
+    <Compile Include="Classes\UserService\GetUsersRequest.cs" />
+    <Compile Include="Classes\UserService\GetUsersResponse.cs" />
+    <Compile Include="Classes\UserService\GetUsersResponseItem.cs" />
+    <Compile Include="Controls\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuestionSearch.ascx.cs">
+      <DependentUpon>QuestionSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QuestionSearch.ascx.designer.cs">
+      <DependentUpon>QuestionSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="External.Master.cs">
+      <DependentUpon>External.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="External.Master.designer.cs">
+      <DependentUpon>External.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Public.Master.cs">
+      <DependentUpon>Public.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public.Master.designer.cs">
+      <DependentUpon>Public.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AccountService.svc.cs">
+      <DependentUpon>AccountService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ApplicantService.svc.cs">
+      <DependentUpon>ApplicantService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DownloadInput.ashx.cs">
+      <DependentUpon>DownloadInput.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\InterviewService.svc.cs">
+      <DependentUpon>InterviewService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\QuestionService.svc.cs">
+      <DependentUpon>QuestionService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\QuestionSetService.svc.cs">
+      <DependentUpon>QuestionSetService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ReportService.svc.cs">
+      <DependentUpon>ReportService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UploadApplicantsCSV.ashx.cs">
+      <DependentUpon>UploadApplicantsCSV.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UploadOutput.ashx.cs">
+      <DependentUpon>UploadOutput.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UploadTestsCSV.ashx.cs">
+      <DependentUpon>UploadTestsCSV.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UserService.svc.cs">
+      <DependentUpon>UserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\CompletePasswordReset.aspx.cs">
+      <DependentUpon>CompletePasswordReset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\CompletePasswordReset.aspx.designer.cs">
+      <DependentUpon>CompletePasswordReset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Applicant\Applicant.aspx.cs">
+      <DependentUpon>Applicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Applicant\Applicant.aspx.designer.cs">
+      <DependentUpon>Applicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Applicant\BulkImport.aspx.cs">
+      <DependentUpon>BulkImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Applicant\BulkImport.aspx.designer.cs">
+      <DependentUpon>BulkImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Applicant\DeleteApplicant.aspx.cs">
+      <DependentUpon>DeleteApplicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Applicant\DeleteApplicant.aspx.designer.cs">
+      <DependentUpon>DeleteApplicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Applicant\ListApplicants.aspx.cs">
+      <DependentUpon>ListApplicants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Applicant\ListApplicants.aspx.designer.cs">
+      <DependentUpon>ListApplicants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interview\CreateInterview.aspx.cs">
+      <DependentUpon>CreateInterview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Interview\CreateInterview.aspx.designer.cs">
+      <DependentUpon>CreateInterview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interview\DeleteInterview.aspx.cs">
+      <DependentUpon>DeleteInterview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Interview\DeleteInterview.aspx.designer.cs">
+      <DependentUpon>DeleteInterview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interview\Interview.aspx.cs">
+      <DependentUpon>Interview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Interview\Interview.aspx.designer.cs">
+      <DependentUpon>Interview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interview\ListInterviews.aspx.cs">
+      <DependentUpon>ListInterviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Interview\ListInterviews.aspx.designer.cs">
+      <DependentUpon>ListInterviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interview\Practice.aspx.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Interview\Practice.aspx.designer.cs">
+      <DependentUpon>Practice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interview\Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Interview\Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interview\Run.aspx.cs">
+      <DependentUpon>Run.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Interview\Run.aspx.designer.cs">
+      <DependentUpon>Run.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Public\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Public\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuestionSet\DeleteQuestionSet.aspx.cs">
+      <DependentUpon>DeleteQuestionSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\QuestionSet\DeleteQuestionSet.aspx.designer.cs">
+      <DependentUpon>DeleteQuestionSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuestionSet\ListQuestionSets.aspx.cs">
+      <DependentUpon>ListQuestionSets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\QuestionSet\ListQuestionSets.aspx.designer.cs">
+      <DependentUpon>ListQuestionSets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuestionSet\QuestionSet.aspx.cs">
+      <DependentUpon>QuestionSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\QuestionSet\QuestionSet.aspx.designer.cs">
+      <DependentUpon>QuestionSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Question\DeleteQuestion.aspx.cs">
+      <DependentUpon>DeleteQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Question\DeleteQuestion.aspx.designer.cs">
+      <DependentUpon>DeleteQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Question\ListQuestions.aspx.cs">
+      <DependentUpon>ListQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Question\ListQuestions.aspx.designer.cs">
+      <DependentUpon>ListQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Question\Question.aspx.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Question\Question.aspx.designer.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Users\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Users\DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Users\EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\ListUsers.aspx.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Users\ListUsers.aspx.designer.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebRole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\TestService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.html" />
+    <Content Include="Assets\Bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Assets\Bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Assets\Bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\Bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Assets\Bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Assets\Bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Controls\List.ascx" />
+    <Content Include="Controls\QuestionSearch.ascx" />
+    <Content Include="Error.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\busy.gif" />
+    <Content Include="Images\logo-black.png" />
+    <Content Include="Images\logo-blue.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo.svg" />
+    <Content Include="Interview.Web.csproj" />
+    <Content Include="Scripts\Account\Account.js" />
+    <Content Include="Scripts\Account\ChangePassword.js" />
+    <Content Include="Scripts\Account\CompletePasswordReset.js" />
+    <Content Include="Scripts\Account\Login.js" />
+    <Content Include="Scripts\Account\Logout.js" />
+    <Content Include="Scripts\Account\ResetPassword.js" />
+    <Content Include="Scripts\Applicant\Applicant.js" />
+    <Content Include="Scripts\Applicant\BulkImport.js" />
+    <Content Include="Scripts\Applicant\DeleteApplicant.js" />
+    <Content Include="Scripts\Applicant\ListApplicants.js" />
+    <Content Include="Scripts\Base\Cookies.js" />
+    <Content Include="Scripts\Base\Extensions.js" />
+    <Content Include="Scripts\Base\jquery.form.js" />
+    <Content Include="Scripts\Base\ListViewModel.js" />
+    <Content Include="Scripts\Base\QuestionSearch.js" />
+    <Content Include="Scripts\Base\ViewModel.js" />
+    <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\Interview\CreateInterview.js" />
+    <Content Include="Scripts\Interview\DeleteInterview.js" />
+    <Content Include="Scripts\Interview\Interview.js" />
+    <Content Include="Scripts\Interview\ListInterviews.js" />
+    <Content Include="Scripts\Interview\Practice.js" />
+    <Content Include="Scripts\Interview\Print.js" />
+    <Content Include="Scripts\Interview\Run.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\Markdown\LICENSE.txt" />
+    <Content Include="Scripts\Markdown\Markdown-mvvm.js" />
+    <Content Include="Scripts\Markdown\Markdown.Converter.js" />
+    <Content Include="Scripts\Markdown\Markdown.Sanitizer.js" />
+    <Content Include="Scripts\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="Scripts\QuestionSet\DeleteQuestionSet.js" />
+    <Content Include="Scripts\QuestionSet\ListQuestionSets.js" />
+    <Content Include="Scripts\QuestionSet\QuestionSet.js" />
+    <Content Include="Scripts\Question\DeleteQuestion.js" />
+    <Content Include="Scripts\Question\ListQuestions.js" />
+    <Content Include="Scripts\Question\Question.js" />
+    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\Users\CreateUser.js" />
+    <Content Include="Scripts\Users\DeleteUser.js" />
+    <Content Include="Scripts\Users\EditUser.js" />
+    <Content Include="Scripts\Users\ListUsers.js" />
+    <Content Include="Services\AccountService.svc" />
+    <Content Include="Services\ApplicantService.svc" />
+    <Content Include="Services\InterviewService.svc" />
+    <Content Include="Services\QuestionService.svc" />
+    <Content Include="Services\QuestionSetService.svc" />
+    <Content Include="Services\ReportService.svc" />
+    <Content Include="Services\UserService.svc" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Styles\normalize.css" />
+    <Content Include="Styles\normalize.min.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Views\Account\Account.aspx" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\CompletePasswordReset.aspx" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Account\Logout.aspx" />
+    <Content Include="Views\Account\ResetPassword.aspx" />
+    <Content Include="Views\Applicant\Applicant.aspx" />
+    <Content Include="Views\Applicant\BulkImport.aspx" />
+    <Content Include="Views\Applicant\DeleteApplicant.aspx" />
+    <Content Include="Views\Applicant\ListApplicants.aspx" />
+    <Content Include="Views\Help.aspx" />
+    <Content Include="Views\Home.aspx" />
+    <Content Include="Views\Interview\CreateInterview.aspx" />
+    <Content Include="Views\Interview\DeleteInterview.aspx" />
+    <Content Include="Views\Interview\Interview.aspx" />
+    <Content Include="Views\Interview\ListInterviews.aspx" />
+    <Content Include="Views\Interview\Practice.aspx" />
+    <Content Include="Views\Interview\Print.aspx" />
+    <Content Include="Views\Interview\Run.aspx" />
+    <Content Include="Views\Public\Welcome.aspx" />
+    <Content Include="Views\QuestionSet\DeleteQuestionSet.aspx" />
+    <Content Include="Views\QuestionSet\ListQuestionSets.aspx" />
+    <Content Include="Views\QuestionSet\QuestionSet.aspx" />
+    <Content Include="Views\Question\DeleteQuestion.aspx" />
+    <Content Include="Views\Question\ListQuestions.aspx" />
+    <Content Include="Views\Question\Question.aspx" />
+    <Content Include="Views\Users\CreateUser.aspx" />
+    <Content Include="Views\Users\DeleteUser.aspx" />
+    <Content Include="Views\Users\EditUser.aspx" />
+    <Content Include="Views\Users\ListUsers.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <Content Include="External.Master" />
+    <Content Include="packages.config" />
+    <Content Include="Public.Master" />
+    <Content Include="Services\DownloadInput.ashx" />
+    <Content Include="Services\UploadApplicantsCSV.ashx" />
+    <Content Include="Services\UploadOutput.ashx" />
+    <Content Include="Services\UploadTestsCSV.ashx" />
+    <Content Include="Site.Master" />
+    <Content Include="Web.config" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InitialRound.BusinessLogic\InitialRound.BusinessLogic.csproj">
+      <Project>{47c8513b-f283-430e-b355-726b1759a458}</Project>
+      <Name>InitialRound.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InitialRound.Common\InitialRound.Common.csproj">
+      <Project>{a2a466c6-8c74-43b6-be88-c4a8332ea0f9}</Project>
+      <Name>InitialRound.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InitialRound.Models\InitialRound.Models.csproj">
+      <Project>{1af99bcb-b8dd-45a3-8fdd-4c8b5509e4d2}</Project>
+      <Name>InitialRound.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2119/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

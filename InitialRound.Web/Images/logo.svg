@@ -1,0 +1,23 @@
+﻿<svg width="480" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <linearGradient y1="0" x1="0" y2="1" x2="1" id="svg_1">
+   <stop offset="0" stop-opacity="0.99609" stop-color="#2f77c4"/>
+   <stop offset="1" stop-opacity="0.99609" stop-color="#12508e"/>
+  </linearGradient>
+  <linearGradient y1="0" x1="0" y2="1" x2="1" id="svg_2">
+   <stop offset="0" stop-opacity="0.99609" stop-color="#2f77c4"/>
+   <stop offset="1" stop-opacity="0.99219" stop-color="#072f56"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_10">
+   <path stroke="#000000" id="svg_4" fill="url(#svg_2)" stroke-width="0" d="m25.27774,335.81631l93.28509,39.87454l344.43717,-151.66545l0,14.95293l-346.23112,153.80154l-91.49114,-41.29852l0,-15.66504z"/>
+   <path stroke="#000000" id="svg_5" fill="url(#svg_2)" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" d="m24.38077,142.85242l89.69674,38.45052l346.23087,-145.25713l-0.00003,-16.33172l-277.41519,-0.21409l-157.63163,69.58016l-0.88076,53.77225l0,0.00002z"/>
+   <path stroke="#000000" id="svg_6" fill="url(#svg_2)" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" d="m23.50001,402.03583l93.28496,41.29892l344.43762,-148.10529l-0.89661,81.88617l-190.26205,81.88434l-246.56391,0l0,-56.96414l-0.00001,0z"/>
+   <path stroke="#000000" id="svg_8" fill="url(#svg_2)" stroke-width="0" d="m25.27774,264.96793l93.28509,39.87454l344.43717,-151.66545l0,14.95291l-346.23112,153.80159l-91.49114,-41.29855l0,-15.66504z"/>
+   <path stroke="#000000" id="svg_9" fill="url(#svg_2)" stroke-width="0" d="m25.27774,196.61169l93.28509,39.87451l344.43717,-151.66545l0,14.95293l-346.23112,153.80152l-91.49114,-41.29857l0,-15.66499l0,0.00005z"/>
+  </g>
+ </g>
+</svg>

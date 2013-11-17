@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="InitialRound" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-10.1.8">
+  <WebRole name="InitialRound.Web" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="https" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="TableStorageConnectionString" />
+      <Setting name="RootConnectionString" />
+      <Setting name="BlobStorageConnectionString" />
+      <Setting name="QueueStorageConnectionString" />
+      <Setting name="RootURI" />
+    </ConfigurationSettings>
+  </WebRole>
+  <WorkerRole name="InitialRound.Email" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="SmtpHost" />
+      <Setting name="SmtpUsername" />
+      <Setting name="SmtpPassword" />
+      <Setting name="SmtpPort" />
+      <Setting name="SmtpTimeout" />
+      <Setting name="TableStorageConnectionString" />
+      <Setting name="QueueStorageConnectionString" />
+    </ConfigurationSettings>
+  </WorkerRole>
+</ServiceDefinition>

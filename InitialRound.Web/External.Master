@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="External.Master.cs" Inherits="InitialRound.Test.External" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Initial Round</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Initial Round simplifies the traditional technical interview process with online screening tools specifically targeting software developers." />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="~/Assets/Bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/Bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/Scripts/knockout-2.1.0.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/Assets/Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Base/Extensions.js"></script>
+    <script type="text/javascript" src="/Scripts/Base/ViewModel.js"></script>
+    <script type="text/javascript" src="/Scripts/underscore-min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.overlay').centered();
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="/Images/logo-blue.png" style="vertical-align: middle;" />
+            <span style="vertical-align: middle;">Initial Round</span>
+        </h1>
+
+        <hr />
+
+        <div id="mainContent">
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <hr />
+
+        <div id="footer" class="navbar">
+            <div class="navbar-inner">
+                <div class="navbar-text">&copy; Initial Round 2013</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="backdrop" data-keyboard="false" data-bind="popup: Busy">
+        <div class="overlay busyIndicator">
+            <img src="/Images/busy.gif" />
+        </div>
+    </div>
+
+    <div class="modal fade" data-bind="popup: ErrorMessage() != null">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Error</h3>
+        </div>
+        <div class="modal-body">
+            <p data-bind="text: ErrorMessage" class="text-error"></p>
+
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn btn-primary" data-bind="click: function() { ErrorMessage(null); }">Close</a>
+        </div>
+    </div>
+
+    <div class="backdrop" data-bind="popup: ErrorMessage() != null">
+        <div class="overlay container">
+            <div class="modal-header">
+                <h3>Error</h3>
+            </div>
+            <div class="modal-body">
+                <p data-bind="text: ErrorMessage" class="text-error"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" data-bind="click: function() { ErrorMessage(null); }">Close</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

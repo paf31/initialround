@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.Master.cs" Inherits="InitialRound.Web.PublicMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Initial Round</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'
+        type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Exo:600,800' rel='stylesheet'
+        type='text/css' />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/Scripts/knockout-2.1.0.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Base/Layout.js"></script>
+    <script type="text/javascript" src="/Scripts/Base/Extensions.js"></script>
+    <script type="text/javascript" src="/Scripts/Base/ViewModel.js"></script>
+    <script type="text/javascript" src="/Scripts/underscore-min.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+
+    <div id="wrapper">
+        <div id="top">
+            <div id="titleStrip" class="blueGradient">
+                <div id="topInner">
+                    <h1 id="title">
+                        <span class="TitleInitial">Initial</span><span class="TitleRound">Round</span>
+                    </h1>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div id="headerDivider" class="blackGradient"></div>
+        </div>
+
+        <div id="body">
+            <div id="center">
+                <div id="content">
+                    <fieldset data-bind="visible: ErrorMessage() != null">
+                        <legend class="errorMessage">Error</legend>
+                        <div class="errorMessage" data-bind="text: ErrorMessage"></div>
+                    </fieldset>
+
+                    <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="busyIndicator" data-bind="visible: Busy"></div>
+            </div>
+        </div>
+
+        <div id="footerDivider" class="blackGradient"></div>
+
+        <div id="footer" class="blueGradient">
+            <div id="footerInner">
+                <div>&copy; Initial Round 2012</div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
