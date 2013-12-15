@@ -121,7 +121,9 @@ namespace InitialRound.BusinessLogic.Controllers
 
         public static void UploadBlob(string name, string value)
         {
-            ICloudBlob blob = GetBlob(name);
+            CloudBlobContainer container = GetBlobContainer();
+
+            ICloudBlob blob = container.GetBlockBlobReference(name);
 
             if (value == null)
             {
@@ -133,9 +135,10 @@ namespace InitialRound.BusinessLogic.Controllers
                 using (StreamWriter writer = new StreamWriter(stream))
                 {
                     writer.Write(value);
-                }
+                    writer.Flush();
 
-                blob.UploadFromStream(stream);
+                    blob.UploadFromByteArray(stream.GetBuffer(), 0, (int)stream.Length);
+                }
             }
         }
 
@@ -150,6 +153,8 @@ namespace InitialRound.BusinessLogic.Controllers
                 using (MemoryStream stream = new MemoryStream())
                 { 
                     blob.DownloadToStream(stream);
+
+                    stream.Position = 0;
 
                     using (StreamReader reader = new StreamReader(stream))
                     {
