@@ -1,7 +1,9 @@
 initialround
 ============
 
-Web app for interviewing technical candidates in the browser
+Web app for interviewing technical candidates in the browser.
+
+I decided recently to open source the code for my startup [Initial Round](http://initialround.com) after a year of on-and-off development. I've stripped out all of the multi-tenant related code and now here is a version which can be used as a single-tenant app. Hopefully someone can benefit from the code. Deployment and setup should be straightforward. Contact me via GitHub if you're interested in deploying this or working on customizations.
 
 Distributed under the terms of the BSD 3-clause License. See the LICENSE file for more information.
 

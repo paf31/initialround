@@ -121,6 +121,7 @@ CREATE TABLE dbo.Attempt (
 	[InterviewQuestionID] [uniqueidentifier] NOT NULL,
 	[Output] [uniqueidentifier] NOT NULL,	
 	[Code] [uniqueidentifier] NOT NULL,	
+	[Randomizer] [bigint] NULL,
 	[CreatedDate] [datetime2] NOT NULL,
 	[CreatedBy] [varchar](50) NOT NULL,
 	[LastUpdatedDate] [datetime2] NOT NULL,
