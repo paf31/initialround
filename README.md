@@ -7,6 +7,8 @@ I decided recently to open source the code for my startup [Initial Round](http:/
 
 Distributed under the terms of the BSD 3-clause License. See the LICENSE file for more information.
 
+Bitcoin donations are gratefully accepted at 14ZhCym28WDuFhocP44tU1dBpCzjX1DvhF.
+
 ## Running
 
 This code is intended for educational purposes.
